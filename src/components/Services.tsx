@@ -1,3 +1,5 @@
+import ServiceModal from "./ServiceModal";
+
 function Services(): JSX.Element {
   return (
     <>
@@ -136,6 +138,8 @@ function Services(): JSX.Element {
           </div>
         </div>
       </section>
+      {/* ServiceModal */}
+      <ServiceModal />
     </>
   );
 }

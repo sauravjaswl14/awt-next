@@ -5,6 +5,10 @@ import ByType from "./ByType";
 function Solutions(): JSX.Element {
   const [toggle, setToggle] = useState<boolean>(true);
 
+  function handleClick(toggleStatus: boolean): void {
+    setToggle(toggleStatus);
+  }
+
   return (
     // <!-- Solution Section -->
     <section id="solutions">
@@ -61,13 +65,13 @@ function Solutions(): JSX.Element {
           {/* <!-- Buttons --> */}
           <div className="mb-[24px] sm:flex sm:space-x-12">
             <button
-              onClick={() => setToggle(false)}
+              onClick={() => handleClick(false)}
               className="lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D] focus:text-[#0000cc] focus:border-b-4 focus:border-b-[#0000cc]"
             >
               By Industry
             </button>
             <button
-              onClick={() => setToggle(true)}
+              onClick={() => handleClick(true)}
               className="lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D] focus:text-[#0000cc] focus:border-b-4 focus:border-b-[#0000cc]"
             >
               By Type

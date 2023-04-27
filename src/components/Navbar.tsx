@@ -1,6 +1,58 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+// import "../styles/navbar.module.css";
+import ServiceDetail from "./ServiceDetail";
+import SolutionsDetail from "./SolutionsDetail";
 
+// function toggleNavPanel(section: string, arrow: string): void {
+//   const panel = document.getElementById(section)!;
+//   const arrowID = document.getElementById(arrow)!;
+//   const maxH = "500px";
+//   if (panel.style.height == maxH) {
+//     panel.style.height = "0px";
+//     arrowID.classList.toggle("rotate-180");
+//     panel.classList.remove("hidden");
+//   } else {
+//     panel.style.height = maxH;
+//     arrowID.classList.toggle("rotate-180");
+//   }
+// }
 function Navbar(): JSX.Element {
+  // let [toggleServices, setToggleServices] = useState<boolean>(false);
+  // let [toggleSolutions, setToggleSolutions] = useState<boolean>(false);
+  // let [toggleAbout, setToggleAbout] = useState<boolean>(false);
+
+  // function handleServices() {
+  //   setToggleServices(!toggleServices);
+  // }
+
+  // function handleSolutions() {
+  //   setToggleSolutions(!toggleSolutions);
+  // }
+
+  interface navObj {
+    services: boolean;
+    solutions: boolean;
+    about: boolean;
+  }
+
+  let [toggle, setToggle] = useState<navObj>({
+    services: false,
+    solutions: false,
+    about: false,
+  });
+
+  function handleServices() {
+    setToggle((prev) => {
+      return { ...prev, services: !prev.services, solutions: false };
+    });
+  }
+
+  function handleSolutions() {
+    setToggle((prev) => {
+      return { ...prev, services: false, solutions: !prev.solutions };
+    });
+  }
+
   return (
     <>
       <section
@@ -22,15 +74,19 @@ function Navbar(): JSX.Element {
             <div className="hidden lg:inline">
               {/* <!-- first dropdown menu --> */}
               <div className="group flex space-x-4 text-sm">
-                <div className="flex space-x-4 group-hover:cursor-pointer">
-                  <button className="text-[#4d4d4d] font-bold">Services</button>
+                <button
+                  onClick={handleServices}
+                  className=" text-[#4d4d4d] font-bold focus:text-[#0000cc] flex space-x-8 group-hover:cursor-pointer"
+                >
+                  Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    id="navarrow"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="w-6 h-6 group-hover:cursor-pointer"
+                    className="w-6 h-6 ml-4 group-hover:cursor-pointer focus:text-[#0000cc]"
                   >
                     <path
                       strokeLinecap="round"
@@ -38,10 +94,32 @@ function Navbar(): JSX.Element {
                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </div>
+                </button>
+
+                <button
+                  onClick={handleSolutions}
+                  className="text-[#4d4d4d] font-bold focus:text-[#0000cc] flex space-x-8 group-hover:cursor-pointer"
+                >
+                  Solutions
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    id="solution_arrow"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6 ml-4 group-hover:cursor-pointer focus:text-[#0000cc]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
                 <div className="flex space-x-4 group-hover:cursor-pointer">
-                  <button className="text-[#4d4d4d] font-bold">
-                    Solutions
+                  <button className="text-[#4d4d4d] font-bold focus:text-[#0000cc]">
+                    About
                   </button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -49,24 +127,7 @@ function Navbar(): JSX.Element {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="w-6 h-6 group-hover:cursor-pointer"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </div>
-                <div className="flex space-x-4 group-hover:cursor-pointer">
-                  <button className="text-[#4d4d4d] font-bold">About</button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6 group-hover:cursor-pointer"
+                    className="w-6 h-6 group-hover:cursor-pointer focus:text-[#0000cc]"
                   >
                     <path
                       strokeLinecap="round"
@@ -232,6 +293,10 @@ function Navbar(): JSX.Element {
           </div>
         </nav>
       </section>
+      {/* <ServiceDetail /> */}
+
+      {toggle.services && <ServiceDetail />}
+      {toggle.solutions && <SolutionsDetail />}
     </>
   );
 }
