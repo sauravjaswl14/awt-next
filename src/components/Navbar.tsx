@@ -1,34 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-// import "../styles/navbar.module.css";
+
 import ServiceDetail from "./ServiceDetail";
 import SolutionsDetail from "./SolutionsDetail";
 
-// function toggleNavPanel(section: string, arrow: string): void {
-//   const panel = document.getElementById(section)!;
-//   const arrowID = document.getElementById(arrow)!;
-//   const maxH = "500px";
-//   if (panel.style.height == maxH) {
-//     panel.style.height = "0px";
-//     arrowID.classList.toggle("rotate-180");
-//     panel.classList.remove("hidden");
-//   } else {
-//     panel.style.height = maxH;
-//     arrowID.classList.toggle("rotate-180");
-//   }
-// }
 function Navbar(): JSX.Element {
-  // let [toggleServices, setToggleServices] = useState<boolean>(false);
-  // let [toggleSolutions, setToggleSolutions] = useState<boolean>(false);
-  // let [toggleAbout, setToggleAbout] = useState<boolean>(false);
-
-  // function handleServices() {
-  //   setToggleServices(!toggleServices);
-  // }
-
-  // function handleSolutions() {
-  //   setToggleSolutions(!toggleSolutions);
-  // }
-
   interface navObj {
     services: boolean;
     solutions: boolean;
