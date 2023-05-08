@@ -4,8 +4,10 @@ import ByType from "./ByType";
 
 function Solutions(): JSX.Element {
   const [toggle, setToggle] = useState<boolean>(true);
+  let [activeSolution, setActiveSolution] = useState<string>("");
 
-  function handleClick(toggleStatus: boolean): void {
+  function handleClick(toggleStatus: boolean, solution: string): void {
+    setActiveSolution(solution);
     setToggle(toggleStatus);
   }
 
@@ -65,14 +67,22 @@ function Solutions(): JSX.Element {
           {/* <!-- Buttons --> */}
           <div className="mb-[24px] sm:flex sm:space-x-12">
             <button
-              onClick={() => handleClick(false)}
-              className="lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D] focus:text-[#0000cc] focus:border-b-4 focus:border-b-[#0000cc]"
+              onClick={() => handleClick(false, "ByIndustry")}
+              className={`lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D] ${
+                activeSolution === "ByIndustry"
+                  ? "focus:text-[#0000cc] border-b-4 border-b-[#0000cc]"
+                  : ""
+              } `}
             >
               By Industry
             </button>
             <button
-              onClick={() => handleClick(true)}
-              className="lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D] focus:text-[#0000cc] focus:border-b-4 focus:border-b-[#0000cc]"
+              onClick={() => handleClick(true, "ByType")}
+              className={`lg:px-[84px] lg:py-[19px] lg:w-[260px] lg:h-[60px] lg:m-[16px] font-bold text-[#4D4D4D]  ${
+                activeSolution === "ByType"
+                  ? "focus:text-[#0000cc] border-b-4 border-b-[#0000cc]"
+                  : ""
+              }`}
             >
               By Type
             </button>

@@ -10,7 +10,7 @@ function ServiceModal(props: { data: Service[] }) {
 
   return (
     <section id="modal">
-      <div className=" container bg-[#e5e5e5] mt-10 p-8 max-w-full lg:h-[710px] md:p-5">
+      <div className=" container bg-[#e5e5e5] mt-10 p-10 max-w-full md:p-5">
         {/* <!-- Grid Container --> */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-4 md:grid-rows-2">
           {/* <!-- Flex Container --> */}
