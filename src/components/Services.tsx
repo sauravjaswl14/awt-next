@@ -1,25 +1,20 @@
-import React, { useState } from "react";
-import ServiceModal from "./ServiceModal";
-import {
-  Service,
-  ServicesType,
-  AllServices,
-  datas,
-} from "@/model/ServicesData";
+import React, { useState } from 'react'
+import ServiceModal from './ServiceModal'
+import { Service, ServicesType, AllServices, datas } from '@/model/ServicesData'
 
 function Services(): JSX.Element {
   interface stateObj {
-    compute: boolean;
-    security: boolean;
-    iaas: boolean;
-    cloudServices: boolean;
-    Management: boolean;
-    saas: boolean;
-    dataProtection: boolean;
-    managedSecurity: boolean;
-    itEssentials: boolean;
-    storage: boolean;
-    collaboration: boolean;
+    compute: boolean
+    security: boolean
+    iaas: boolean
+    cloudServices: boolean
+    Management: boolean
+    saas: boolean
+    dataProtection: boolean
+    managedSecurity: boolean
+    itEssentials: boolean
+    storage: boolean
+    collaboration: boolean
   }
   const [isModalOpen, setIsModalOpen] = useState<stateObj>({
     compute: false,
@@ -33,14 +28,14 @@ function Services(): JSX.Element {
     itEssentials: false,
     storage: false,
     collaboration: false,
-  });
+  })
 
-  let [activeService, setActiveService] = useState<string>("");
+  let [activeService, setActiveService] = useState<string>('')
 
   function handleClick(service: string) {
     switch (service) {
-      case "compute":
-        setActiveService("compute");
+      case 'compute':
+        setActiveService('compute')
         //document.getElementById("compute")!.classList.toggle("border-b-4");
         setIsModalOpen((prev) => {
           return {
@@ -56,13 +51,13 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "security":
+          }
+        })
+        break
+      case 'security':
         //document.getElementById("security")!.classList.toggle("border-b-4");
         //document.getElementById("compute")!.classList.toggle("border-b-4");
-        setActiveService("security");
+        setActiveService('security')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -77,12 +72,12 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "iaas":
+          }
+        })
+        break
+      case 'iaas':
         // document.getElementById("iaas")!.classList.toggle("border-b-4");
-        setActiveService("iaas");
+        setActiveService('iaas')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -97,11 +92,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "cloudServices":
-        setActiveService("cloudServices");
+          }
+        })
+        break
+      case 'cloudServices':
+        setActiveService('cloudServices')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -116,11 +111,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "management":
-        setActiveService("management");
+          }
+        })
+        break
+      case 'management':
+        setActiveService('management')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -135,11 +130,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "saas":
-        setActiveService("saas");
+          }
+        })
+        break
+      case 'saas':
+        setActiveService('saas')
 
         setIsModalOpen((prev) => {
           return {
@@ -155,11 +150,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "dataProtection":
-        setActiveService("dataProtection");
+          }
+        })
+        break
+      case 'dataProtection':
+        setActiveService('dataProtection')
 
         setIsModalOpen((prev) => {
           return {
@@ -175,11 +170,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "managedSecurity":
-        setActiveService("managedSecurity");
+          }
+        })
+        break
+      case 'managedSecurity':
+        setActiveService('managedSecurity')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -194,11 +189,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "itEssentials":
-        setActiveService("itEssentials");
+          }
+        })
+        break
+      case 'itEssentials':
+        setActiveService('itEssentials')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -213,11 +208,11 @@ function Services(): JSX.Element {
             itEssentials: !prev.itEssentials,
             storage: false,
             collaboration: false,
-          };
-        });
-        break;
-      case "storage":
-        setActiveService("storage");
+          }
+        })
+        break
+      case 'storage':
+        setActiveService('storage')
         setIsModalOpen((prev) => {
           return {
             ...prev,
@@ -232,11 +227,11 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: !prev.storage,
             collaboration: false,
-          };
-        });
-        break;
-      case "collaboration":
-        setActiveService("collaboration");
+          }
+        })
+        break
+      case 'collaboration':
+        setActiveService('collaboration')
 
         setIsModalOpen((prev) => {
           return {
@@ -252,102 +247,103 @@ function Services(): JSX.Element {
             itEssentials: false,
             storage: false,
             collaboration: !prev.collaboration,
-          };
-        });
-        break;
+          }
+        })
+        break
     }
   }
   return (
     <>
-      <section id="services" className="max-w-full">
-        <div className="relative mx-auto mt-9 max-w-screen">
-          <h3 className="font-bold text-3xl text-center text-[#4d4d4d] mb-12 md:text-left md:ml-16">
+      <section id='services' className='max-w-full'>
+        <div className='relative mx-auto mt-9 max-w-screen'>
+          <h3 className='font-bold text-3xl text-center text-[#4d4d4d] mb-12 md:text-left md:ml-16'>
             Services
           </h3>
           {/* <!-- Services list -1 --> */}
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:gap-7">
+          <div className='grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:gap-7'>
             {/* <!-- Item-1 --> */}
             <div
-              id="compute"
-              onClick={() => handleClick("compute")}
+              id='compute'
+              onClick={() => handleClick('compute')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService == "compute" ? "border-b-4 p-4" : ""
+                activeService == 'compute' ? 'border-b-4 p-4' : ''
               } `}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/compute.png" alt="" />
+                  <img src='../img/new/compute-icon.png' alt='' />
                 </div>
-                {/* <!-- <p className="">Compute</p> --> */}
+                <p className='font-bold'>Compute</p>
               </div>
             </div>
 
             {/* <!-- Item-2 --> */}
             <div
-              id="security"
-              onClick={() => handleClick("security")}
+              id='security'
+              onClick={() => handleClick('security')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService == "security" ? "border-b-4 p-4" : ""
+                activeService == 'security' ? 'border-b-4 p-4' : ''
               } `}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/security.png" alt="" />
+                  <img src='../img/new/security-icon.png' alt='' />
                 </div>
-                {/* <!-- <p className="">Compute</p> --> */}
+                <p className='font-bold'>Security</p>
               </div>
             </div>
 
             {/* <!-- Item-3 --> */}
             <div
-              id="iaas"
-              onClick={() => handleClick("iaas")}
+              id='iaas'
+              onClick={() => handleClick('iaas')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "iaas" ? "border-b-4 p-4" : ""
+                activeService === 'iaas' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col items-center space-y-4'>
                 <div>
-                  {/* <!-- svg --> */}
-                  <img src="../img/new/iaas-icon.png" alt="" />
+                  <img src='../img/new/iaas-icon.png' alt='' />
                 </div>
-                {/* <!-- <p className="">Compute</p> --> */}
+                <p className='whitespace-nowrap font-bold'>
+                  Infrastructure as a service
+                </p>
               </div>
             </div>
 
             {/* <!-- Item-4 --> */}
             <div
-              id="cloudServices"
-              onClick={() => handleClick("cloudServices")}
+              id='cloudServices'
+              onClick={() => handleClick('cloudServices')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "cloudServices" ? "border-b-4 p-4" : ""
+                activeService === 'cloudServices' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4 ">
+              <div className='flex flex-col space-y-4 '>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/cloud-services-icon.png" alt="" />
+                  <img src='../img/new/cloud-services-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm">Cloud Services</p>
+                <p className='font-bold '>Cloud Services</p>
               </div>
             </div>
 
             {/* <!-- Item-5 --> */}
             <div
-              id="management"
-              onClick={() => handleClick("management")}
+              id='management'
+              onClick={() => handleClick('management')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "management" ? "border-b-4 p-4" : ""
+                activeService === 'management' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col items-center justify-center space-y-4">
+              <div className='flex flex-col items-center justify-center space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/management&support - icon.png" alt="" />
+                  <img src='../img/new/management&support - icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm text-center">
+                <p className='font-bold whitespace-nowrap text-center'>
                   Management & support
                 </p>
               </div>
@@ -355,107 +351,105 @@ function Services(): JSX.Element {
 
             {/* <!-- Item-6 --> */}
             <div
-              id="saas"
-              onClick={() => handleClick("saas")}
+              id='saas'
+              onClick={() => handleClick('saas')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "saas" ? "border-b-4 p-4" : ""
+                activeService === 'saas' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4 items-center justify-center">
+              <div className='flex flex-col space-y-4 items-center justify-center'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/saas-icon.png" alt="" />
+                  <img src='../img/new/saas-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm">Solution as a service</p>
+                <p className='font-bold'>Solution as a service</p>
               </div>
             </div>
           </div>
-          <hr className="hidden md:block md:mt-10" />
-          <div className="mt-10 grid grid-cols-2 gap-7 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:gap-7">
+          <hr className='hidden md:block md:mt-10' />
+          <div className='mt-10 grid grid-cols-2 gap-7 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:gap-7'>
             {/* <!-- Item-7 --> */}
             <div
-              id="dataProtection"
-              onClick={() => handleClick("dataProtection")}
+              id='dataProtection'
+              onClick={() => handleClick('dataProtection')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "dataProtection" ? "border-b-4 p-4" : ""
+                activeService === 'dataProtection' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col items-center space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
                   <img
-                    src="../img/new/dataProtection.png"
-                    className="w-24 bg-white rounded full"
-                    alt=""
+                    src='../img/new/data-protection-icon.png'
+                    className='w-24 bg-white rounded full'
+                    alt=''
                   />
                 </div>
-                <p className="font-thin text-sm">Data Protection</p>
+                <p className='font-bold'>Data Protection</p>
               </div>
             </div>
             {/* <!-- Item-8 --> */}
             <div
-              id="managedSecurity"
-              onClick={() => handleClick("managedSecurity")}
+              id='managedSecurity'
+              onClick={() => handleClick('managedSecurity')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "managedSecurity" ? "border-b-4 p-4" : ""
+                activeService === 'managedSecurity' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col items-center justify-center space-y-4">
+              <div className='flex flex-col items-center justify-center space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/managed-security-icon.png" alt="" />
+                  <img src='../img/new/managed-security-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm text-center">
-                  Managed Security
-                </p>
+                <p className='font-bold'>Managed Security</p>
               </div>
             </div>
             {/* <!-- Item-9 --> */}
             <div
-              id="itEssentials"
-              onClick={() => handleClick("itEssentials")}
+              id='itEssentials'
+              onClick={() => handleClick('itEssentials')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "itEssentials" ? "border-b-4 p-4" : ""
+                activeService === 'itEssentials' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col items-center space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/it-essentials-icon.png" alt="" />
+                  <img src='../img/new/it-essentials-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm">IT Essentials</p>
+                <p className='font-bold'>IT Essentials</p>
               </div>
             </div>
             {/* <!-- Item-10 --> */}
             <div
-              id="storage"
-              onClick={() => handleClick("storage")}
+              id='storage'
+              onClick={() => handleClick('storage')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "storage" ? "border-b-4 p-4" : ""
+                activeService === 'storage' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4 items-center justify-center">
+              <div className='flex flex-col space-y-4 items-center justify-center'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/storage-icon.png" alt="" />
+                  <img src='../img/new/storage-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm">Storage</p>
+                <p className='font-bold'>Storage</p>
               </div>
             </div>
             {/* <!-- Item-9 --> */}
             <div
-              id="collaboration"
-              onClick={() => handleClick("collaboration")}
+              id='collaboration'
+              onClick={() => handleClick('collaboration')}
               className={`flex items-center justify-center px-8 hover:cursor-pointer border-[#0000cc] ${
-                activeService === "collaboration" ? "border-b-4 p-4" : ""
+                activeService === 'collaboration' ? 'border-b-4 p-4' : ''
               }`}
             >
-              <div className="flex flex-col space-y-4">
+              <div className='flex flex-col items-center space-y-4'>
                 <div>
                   {/* <!-- svg --> */}
-                  <img src="../img/new/collaboration-icon.png" alt="" />
+                  <img src='../img/new/collaboration-icon.png' alt='' />
                 </div>
-                <p className="font-thin text-sm">Collaboration</p>
+                <p className='font-bold'>Collaboration</p>
               </div>
             </div>
           </div>
@@ -489,6 +483,6 @@ function Services(): JSX.Element {
         <ServiceModal data={datas[10].details.services} />
       )}
     </>
-  );
+  )
 }
-export default Services;
+export default Services
