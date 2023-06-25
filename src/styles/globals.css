@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #hero {
   background: transparent linear-gradient(90deg, #0000cc 0%, #169aff 100%) 0% 0%
     no-repeat padding-box;

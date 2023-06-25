@@ -12,7 +12,7 @@ function careerPageApply() {
       <Navbar />
       <Hero />
       <CareerApplyDesc />
-      <CareerApplyForm />
+
       <AccessAbout />
       <Footer />
     </>

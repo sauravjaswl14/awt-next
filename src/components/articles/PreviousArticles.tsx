@@ -1,6 +1,10 @@
 import React from 'react'
 
 function PreviousArticles() {
+  const divStyle = {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  }
+
   return (
     <>
       <section>
@@ -30,7 +34,7 @@ function PreviousArticles() {
                 </div>
               </div>
             </div>
-            <div className='my-6 lg:w-[800px] flex flex-col space-y-4'>
+            <div className='my-8 lg:w-[800px] flex flex-col space-y-4'>
               <p className='text-2xl font-bold text-[#4d4d4d]'>
                 Get an insight on how to secure your data
               </p>
@@ -50,7 +54,7 @@ function PreviousArticles() {
                 </div>
               </div>
             </div>
-            <div className='my-6 lg:w-[800px] flex flex-col space-y-4'>
+            <div className='my-8 lg:w-[800px] flex flex-col space-y-4'>
               <p className='text-2xl font-bold text-[#4d4d4d]'>
                 Get an insight on how to secure your data
               </p>
@@ -70,7 +74,7 @@ function PreviousArticles() {
                 </div>
               </div>
             </div>
-            <div className='my-6 lg:w-[800px] flex flex-col space-y-4'>
+            <div className='my-8 lg:w-[800px] flex flex-col space-y-4'>
               <p className='text-2xl font-bold text-[#4d4d4d]'>
                 Get an insight on how to secure your data
               </p>
@@ -90,7 +94,7 @@ function PreviousArticles() {
                 </div>
               </div>
             </div>
-            <div className='my-6 lg:w-[800px] flex flex-col space-y-4'>
+            <div className='my-8 lg:w-[800px] flex flex-col space-y-4'>
               <p className='text-2xl font-bold text-[#4d4d4d]'>
                 Get an insight on how to secure your data
               </p>
@@ -114,11 +118,29 @@ function PreviousArticles() {
 
           <div>
             <div className='flex flex-col'>
-              <img
-                src='./img/articlesImg.jpg'
-                className='lg:w-[400px] lg:h-[530px] rounded-t-lg'
-                alt=''
-              />
+              <div className='relative'>
+                <img
+                  src='./img/articlesImg.jpg'
+                  className='lg:w-[400px] lg:h-[630px] rounded-t-lg'
+                  alt=''
+                />
+                <div
+                  className='absolute top-0 right-0 bottom-0 left-0 w-full overflow-hidden bg-fixed'
+                  style={divStyle}
+                >
+                  <p className=' pt-10 pl-4 text-lg max-w-xs font-extrabold text-white'>
+                    Stay ahead of the curve with our exclusive newsletter
+                  </p>
+                  <p className=' pt-6 pl-4 text-lg max-w-xs font-extrabold text-white'>
+                    Subscribe now and receive the latest updates, industry
+                    trends, and insider insights directly in your inbox.
+                  </p>
+                  <p className=' pt-6 pl-4 text-lg max-w-xs font-extrabold text-white'>
+                    Don't miss out on valuable content - join our community
+                    today.
+                  </p>
+                </div>
+              </div>
 
               <div className='flex items-center justify-center bg-[#e5e5e5] py-6 px-8 rounded-b-lg'>
                 <div className='flex flex-col items-center space-y-4'>

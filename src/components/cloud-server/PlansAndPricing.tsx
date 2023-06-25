@@ -4,7 +4,7 @@ function PlansAndPricing() {
   return (
     <>
       <section>
-        <div className='m-10 lg:m-24'>
+        <div id='plansAndPricing' className='m-10 lg:m-24'>
           <h4 className='font-bold text-2xl text-[#4d4d4d] inline-block border-b-2 border-[#4d4d4d]'>
             Plans and Pricing
           </h4>

@@ -1,10 +1,11 @@
 import { ServicesData } from '../model/data'
+import Link from 'next/link'
 
 function ServiceDetail(): JSX.Element {
   return (
     <section
       id='service_panel'
-      className='absolute bg-[#e5e5e5] top-[140px] left-0  overflow-hidden z-1000 w-screen lg:h-[500px]'
+      className='fixed bg-[#e5e5e5] top-[140px] left-0  overflow-hidden z-50 w-screen lg:h-[500px]'
     >
       <div className=' container'>
         {/* <!-- parent flex container --> */}
@@ -15,12 +16,21 @@ function ServiceDetail(): JSX.Element {
               return (
                 <p
                   key={index}
-                  className='text-[18px] text-[#4d4d4d] font-bold whitespace-nowrap'
+                  className='text-[#4d4d4d] font-bold whitespace-nowrap'
                 >
                   {service}
                 </p>
               )
             })}
+            <div className='flex space-x-4 items-center'>
+              <Link href='/services'>
+                <p className='font-extrabold text-[#4d4d4d] text-lg'>
+                  View All Services
+                </p>
+              </Link>
+
+              <img src='./icons/right-arrow.png' className='w-5 h-5' alt='' />
+            </div>
           </div>
           {/* <!-- right flex container --> */}
           <div className='flex flex-col space-y-6 p-4 pr-8'>

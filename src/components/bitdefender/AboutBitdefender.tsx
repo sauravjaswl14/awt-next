@@ -3,7 +3,7 @@ import React from 'react'
 function AboutBitdefender() {
   return (
     <>
-      <section>
+      <section id='whyawt'>
         <div className='m-10 lg:m-24'>
           <h3 className='text-3xl text-[#4d4d4d] font-bold inline-block border-b-2 border-[#4d4d4d]'>
             Why AWT?
@@ -73,7 +73,10 @@ function AboutBitdefender() {
             </div>
           </div>
 
-          <p className='text-4xl text-[#0000cc] font-extrabold max-w-xl'>
+          <p
+            id='benefits'
+            className='text-4xl text-[#0000cc] font-extrabold max-w-xl'
+          >
             Defend your IT infrastructure from the threats in cyberspace
           </p>
 

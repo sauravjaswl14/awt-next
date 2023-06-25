@@ -3,7 +3,7 @@ import React from 'react'
 function Collaboration() {
   return (
     <>
-      <section>
+      <section id='collaboration'>
         <div className='mt-16 mb-32 mx-10'>
           <div className='text-2xl font-bold border-b-4 border-[#0000cc] pl-24 text-[#4d4d4d] pb-2 lg:mx-10 lg:mr-[1024px]'>
             Collaboration

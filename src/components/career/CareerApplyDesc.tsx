@@ -1,6 +1,14 @@
 import React from 'react'
+import { useState } from 'react'
+import CareerApplyForm from './CareerApplyForm';
 
 function CareerApplyDesc() {
+
+const[isFormOpen, setIsFormOpen] = useState<boolean>(false);
+
+  function handleClick(){
+    setIsFormOpen(prev => !prev);
+  }
   return (
     <>
       <section>
@@ -73,9 +81,10 @@ function CareerApplyDesc() {
                 </p>
               </div>
               <div className='flex space-x-6'>
-                <button className='font-bold py-2 px-8 text-[#0000cc] border-2 border-[#0000cc] rounded-lg duration-200 hover:bg-[#0000cc] hover:text-white transition ease-in-out'>
+                <button onClick={handleClick} className='font-bold py-2 px-8 text-[#0000cc] border-2 border-[#0000cc] rounded-lg duration-200 hover:bg-[#0000cc] hover:text-white transition ease-in-out'>
                   Apply for job
                 </button>
+
                 <button className='font-bold py-2 px-8 text-[#4d4d4d] border-2 border-[#4d4d4d] rounded-lg duration-200 hover:bg-[#0000cc] hover:text-white transition ease-in-out'>
                   View on Linkedin
                 </button>
@@ -84,6 +93,8 @@ function CareerApplyDesc() {
           </div>
         </div>
       </section>
+
+      {isFormOpen && <CareerApplyForm/>}
     </>
   )
 }

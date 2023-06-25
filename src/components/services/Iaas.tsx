@@ -3,7 +3,7 @@ import React from 'react'
 function Iaas() {
   return (
     <>
-      <section>
+      <section id='iaas'>
         <div className='my-32 mx-10'>
           <div className='text-2xl font-bold border-b-4 border-[#0000cc] pl-10 text-[#4d4d4d] pb-2 lg:mx-10 lg:mr-[1024px]'>
             Infrastructure as a Service

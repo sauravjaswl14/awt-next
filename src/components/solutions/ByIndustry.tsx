@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function ByIndustry() {
@@ -19,10 +20,13 @@ function ByIndustry() {
                 Robust cloud architecture that delivers the perfect balance of
                 speed and reliability
               </p>
-              <div className='flex space-x-4'>
-                <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
+              <div className='flex items-center space-x-4'>
+                <Link
+                  href='/enterpriseSolutions'
+                  className='font-bold inline-block border-b-2 border-[#CCCCCC]'
+                >
                   Learn More
-                </p>
+                </Link>
                 <img src='./icons/right-arrow.png' className='w-5 h-5' alt='' />
               </div>
             </div>
@@ -36,7 +40,7 @@ function ByIndustry() {
                 Robust cloud architecture that delivers the perfect balance of
                 speed and reliability
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>
@@ -53,7 +57,7 @@ function ByIndustry() {
                 Robust cloud architecture that delivers the perfect balance of
                 speed and reliability
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>
@@ -70,7 +74,7 @@ function ByIndustry() {
                 Robust cloud architecture that delivers the perfect balance of
                 speed and reliability
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>
@@ -87,7 +91,7 @@ function ByIndustry() {
                 Reliable secure email service for your business with our
                 advanced email gateway solution
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>

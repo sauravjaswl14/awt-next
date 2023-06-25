@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Solution() {
@@ -17,8 +18,8 @@ function Solution() {
                     className='shadow-2xl -mt-12'
                     alt=''
                   />
-                  <div className='flex flex-col items-center space-y-6'>
-                    <p className='text-[#000000] text-2xl font-extrabold'>
+                  <div className='flex flex-col space-y-6'>
+                    <p className='text-[#000000] text-2xl font-extrabold whitespace-nowrap'>
                       McAfee as a Service
                     </p>
                     <button className='text-[#0000cc] font-bold py-3 px-5 w-44 border-2 border-[#0000cc] rounded-lg duration-200 hover:bg-white transition ease-in-out'>
@@ -35,13 +36,16 @@ function Solution() {
                     className='shadow-2xl -mt-12'
                     alt=''
                   />
-                  <div className='flex flex-col items-center space-y-6'>
-                    <p className='text-[#000000] text-2xl font-extrabold'>
+                  <div className='flex flex-col  space-y-6'>
+                    <p className='text-[#000000] text-2xl font-extrabold whitespace-nowrap'>
                       BitDefendee as a Service
                     </p>
-                    <button className='text-[#0000cc] font-bold py-3 px-5 w-44 border-2 border-[#0000cc] rounded-lg duration-200 hover:bg-white transition ease-in-out'>
+                    <Link
+                      href='/bitdefender'
+                      className='text-[#0000cc] flex justify-center font-bold py-3 px-6 w-44 border-2 border-[#0000cc] rounded-lg duration-200 hover:bg-white transition ease-in-out'
+                    >
                       Browse Plans
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

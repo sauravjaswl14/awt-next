@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Solutions() {
   return (
@@ -70,9 +71,12 @@ function Solutions() {
           </div>
         </div>
 
-        <button className='m-10 py-3 px-8 border-2 font-semibold border-[#4d4d4d] rounded-lg'>
+        <Link
+          href='/solutions'
+          className='m-10 py-3 px-8 border-2 font-semibold border-[#4d4d4d] rounded-lg hover:bg-[#0000cc] hover:text-white transition ease-in-out duration-200'
+        >
           View All Solutions
-        </button>
+        </Link>
       </section>
     </>
   )

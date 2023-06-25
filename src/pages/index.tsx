@@ -7,6 +7,7 @@ import About from '@/components/HomeAbout'
 import Certification from '@/components/Certification'
 import Description from '@/components/Description'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import SolutionsDetail from '@/components/SolutionsDetail'
 
 // import SolutionsDetail from "@/components/SolutionsDetail";
@@ -14,9 +15,15 @@ import SolutionsDetail from '@/components/SolutionsDetail'
 
 function HomeComponent(): JSX.Element {
   return (
-    <>
+    <div>
+      <a href='#hero' className='fixed bottom-6 right-4 z-50'>
+        <img
+          src='./icons/scroll-up-button.png'
+          className='z-50 w-10 h-10'
+          alt=''
+        />
+      </a>
       <Navbar />
-      {/* <SolutionsDetail /> */}
       <Hero />
       <Services />
       <Solutions />
@@ -24,7 +31,7 @@ function HomeComponent(): JSX.Element {
       <Certification />
       <Description />
       <Footer />
-    </>
+    </div>
   )
 }
 

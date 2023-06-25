@@ -11,7 +11,10 @@ import Footer from '@/components/Footer'
 
 function CloudServerMain() {
   return (
-    <>
+    <div className='relative'>
+      <a href='#hero' className='fixed bottom-6 right-4'>
+        <img src='./icons/scroll-up-button.png' alt='' />
+      </a>
       <Navbar />
       <Hero />
       <Desc />
@@ -21,7 +24,7 @@ function CloudServerMain() {
       <About />
       <Description />
       <Footer />
-    </>
+    </div>
   )
 }
 

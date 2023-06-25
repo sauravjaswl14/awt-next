@@ -3,7 +3,7 @@ import React from 'react'
 function ManagedSecurity() {
   return (
     <>
-      <section>
+      <section id='managedSecurity'>
         <div className='mx-10 my-20'>
           <div className='text-2xl font-bold border-b-4 border-[#0000cc] pl-20 text-[#4d4d4d] pb-2 lg:mx-10 lg:mr-[1024px]'>
             Managed Security

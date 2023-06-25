@@ -11,7 +11,10 @@ import React from 'react'
 
 function bitdefender() {
   return (
-    <>
+    <div className='relative'>
+      <a href='#hero' className='fixed bottom-6 right-4'>
+        <img src='./icons/scroll-up-button.png' className='w-10 h-10' alt='' />
+      </a>
       <Navbar />
       <Hero />
       <Desc />
@@ -21,7 +24,7 @@ function bitdefender() {
       <About />
       <Description />
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -5,7 +5,10 @@ function CloudAbout() {
     <>
       <section>
         <div className='m-10 lg:m-24'>
-          <h3 className='text-3xl text-[#4d4d4d] font-bold inline-block border-b-2 border-[#4d4d4d]'>
+          <h3
+            id='whyawt'
+            className='text-3xl text-[#4d4d4d] font-bold inline-block border-b-2 border-[#4d4d4d]'
+          >
             Why AWT?
           </h3>
 
@@ -54,7 +57,10 @@ function CloudAbout() {
             </div>
           </div>
 
-          <p className='text-4xl text-[#0000cc] font-bold max-w-xl'>
+          <p
+            id='benefits'
+            className='text-4xl text-[#0000cc] font-bold max-w-xl'
+          >
             Robust cloud architecture that delivers the perfect balance of speed
             and reliability
           </p>

@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Security() {
   return (
     <>
-      <section>
+      <section id='security'>
         <div className='mx-10 my-20'>
           <div className='text-2xl font-bold border-b-4 border-[#0000cc] pl-32 text-[#4d4d4d] pb-2 lg:mx-10 lg:mr-[1024px]'>
             Security
@@ -18,10 +19,13 @@ function Security() {
                 A cutting-edge encryption which uses both public and symmetric
                 keys to safeguard your web browser
               </p>
-              <div className='flex space-x-4'>
-                <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
+              <div className='flex items-center space-x-4'>
+                <Link
+                  href='/ssl'
+                  className='font-bold inline-block border-b-2 border-[#CCCCCC]'
+                >
                   Learn More
-                </p>
+                </Link>
                 <img src='./icons/right-arrow.png' className='w-5 h-5' alt='' />
               </div>
             </div>
@@ -37,10 +41,13 @@ function Security() {
                 Benefit from real-time monitoring and automatic updates for
                 round-the-clock protection
               </p>
-              <div className='flex space-x-4'>
-                <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
+              <div className='flex items-center space-x-4'>
+                <Link
+                  href='/endpointSecurity'
+                  className='font-bold inline-block border-b-2 border-[#CCCCCC]'
+                >
                   Learn More
-                </p>
+                </Link>
                 <img src='./icons/right-arrow.png' className='w-5 h-5' alt='' />
               </div>
             </div>
@@ -54,7 +61,7 @@ function Security() {
                 Unlock the full potential of your SecOps team by streaming
                 incident response and automation with Cloud SOAR
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>
@@ -63,7 +70,7 @@ function Security() {
             </div>
 
             <div className='flex flex-col space-y-4 p-2 border-b-2 border-black lg:p-6 lg:space-y-6'>
-              <div className='flex space-x-4 lg:space-x-2'>
+              <div className='flex items-center space-x-4 lg:space-x-2'>
                 <img src='./icons/managed-soc-icon.png' alt='' />
                 <p className='font-bold text-sm lg:text-base'>
                   Managed SOC Services
@@ -73,7 +80,7 @@ function Security() {
                 Providing you an AI-based platform using machine learning for
                 real-time threat detection and response
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>
@@ -90,7 +97,7 @@ function Security() {
                 Reliable secure email service for your business with our
                 advanced email gateway solution
               </p>
-              <div className='flex space-x-4'>
+              <div className='flex items-center space-x-4'>
                 <p className='font-bold inline-block border-b-2 border-[#CCCCCC]'>
                   Learn More
                 </p>

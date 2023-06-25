@@ -3,7 +3,7 @@ import React from 'react'
 function ManagementSupport() {
   return (
     <>
-      <section>
+      <section id='management'>
         <div className='ml-10 my-20'>
           <div className='text-2xl font-bold border-b-4 border-[#0000cc] pl-16 text-[#4d4d4d] pb-2 lg:mx-10 lg:mr-[1024px]'>
             Management & Support

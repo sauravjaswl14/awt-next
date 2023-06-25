@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ServiceModal from './ServiceModal'
+import ServiceModal2 from './ServiceModal2'
 import { Service, ServicesType, AllServices, datas } from '@/model/ServicesData'
 
 function Services(): JSX.Element {
@@ -455,33 +456,42 @@ function Services(): JSX.Element {
           </div>
 
           {/* <!-- End of Services --> */}
+
+          {isModalOpen.compute && (
+            <ServiceModal data={datas[0].details.services} />
+          )}
+          {isModalOpen.security && (
+            <ServiceModal data={datas[1].details.services} />
+          )}
+          {isModalOpen.iaas && (
+            <ServiceModal data={datas[2].details.services} />
+          )}
+          {isModalOpen.cloudServices && (
+            <ServiceModal data={datas[3].details.services} />
+          )}
+          {isModalOpen.Management && (
+            <ServiceModal data={datas[4].details.services} />
+          )}
+          {isModalOpen.saas && (
+            <ServiceModal data={datas[5].details.services} />
+          )}
+          {isModalOpen.dataProtection && (
+            <ServiceModal2 data={datas[6].details.services} />
+          )}
+          {isModalOpen.managedSecurity && (
+            <ServiceModal2 data={datas[7].details.services} />
+          )}
+          {isModalOpen.itEssentials && (
+            <ServiceModal2 data={datas[8].details.services} />
+          )}
+          {isModalOpen.storage && (
+            <ServiceModal2 data={datas[9].details.services} />
+          )}
+          {isModalOpen.collaboration && (
+            <ServiceModal2 data={datas[10].details.services} />
+          )}
         </div>
       </section>
-      {isModalOpen.compute && <ServiceModal data={datas[0].details.services} />}
-      {isModalOpen.security && (
-        <ServiceModal data={datas[1].details.services} />
-      )}
-      {isModalOpen.iaas && <ServiceModal data={datas[2].details.services} />}
-      {isModalOpen.cloudServices && (
-        <ServiceModal data={datas[3].details.services} />
-      )}
-      {isModalOpen.Management && (
-        <ServiceModal data={datas[4].details.services} />
-      )}
-      {isModalOpen.saas && <ServiceModal data={datas[5].details.services} />}
-      {isModalOpen.dataProtection && (
-        <ServiceModal data={datas[6].details.services} />
-      )}
-      {isModalOpen.managedSecurity && (
-        <ServiceModal data={datas[7].details.services} />
-      )}
-      {isModalOpen.itEssentials && (
-        <ServiceModal data={datas[8].details.services} />
-      )}
-      {isModalOpen.storage && <ServiceModal data={datas[9].details.services} />}
-      {isModalOpen.collaboration && (
-        <ServiceModal data={datas[10].details.services} />
-      )}
     </>
   )
 }

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 function AboutHero() {
   return (
     <>
@@ -9,12 +11,12 @@ function AboutHero() {
                 A one-stop solution for all your cloud computing needs
               </h2>
               <div className='ml-6'>
-                <a
-                  href='#'
+                <Link
+                  href='/contact'
                   className='font-bold text-white w-[220px] h-[44px] px-[64px] py-[11px] border-[1.5px] border-[#fff] rounded-md hover:bg-slate-400 duration-150'
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

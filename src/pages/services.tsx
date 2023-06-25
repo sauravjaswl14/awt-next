@@ -15,10 +15,14 @@ import Saas from '@/components/services/Saas'
 import Security from '@/components/services/Security'
 import Storage from '@/components/services/Storage'
 import React from 'react'
+import Link from 'next/link'
 
 function Services() {
   return (
-    <>
+    <div className='relative'>
+      <a href='#hero' className='fixed bottom-6 right-4'>
+        <img src='./icons/scroll-up-button.png' alt='' />
+      </a>
       <Navbar />
       <Hero />
       <Compute />
@@ -35,7 +39,7 @@ function Services() {
       <About />
       <Description />
       <Footer />
-    </>
+    </div>
   )
 }
 

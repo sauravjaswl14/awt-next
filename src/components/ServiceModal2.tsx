@@ -2,12 +2,12 @@ import { Service, ServicesType, AllServices, datas } from '@/model/ServicesData'
 
 import Link from 'next/link'
 
-function ServiceModal(props: { data: Service[] }) {
+function ServiceModal2(props: { data: Service[] }) {
   const { data } = props
 
   return (
     <section id='modal'>
-      <div className='absolute top-[230px] left-0 right-0 container bg-[#e5e5e5] mt-10 p-10 max-w-full md:p-5'>
+      <div className='absolute top-[450px] left-0 right-0 container bg-[#e5e5e5] mt-10 p-10  max-w-full md:p-16 md:pb-40'>
         {/* <!-- Grid Container --> */}
         <div className='grid grid-cols-1 gap-10 lg:grid-cols-4 md:grid-rows-2'>
           {/* <!-- Flex Container --> */}
@@ -86,4 +86,4 @@ function ServiceModal(props: { data: Service[] }) {
     </section>
   )
 }
-export default ServiceModal
+export default ServiceModal2

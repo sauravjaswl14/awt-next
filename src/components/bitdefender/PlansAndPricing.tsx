@@ -3,7 +3,7 @@ import React from 'react'
 function PlansAndPricing() {
   return (
     <>
-      <section>
+      <section id='plansAndPricing'>
         <div className='m-10 lg:m-24'>
           <h4 className='font-extrabold text-2xl text-[#4d4d4d] inline-block border-b-2 border-[#4d4d4d]'>
             Plans and Pricing
